@@ -48,7 +48,7 @@
                   <h3 class="mb-1 text-2xl font-bold font-heading">{post.frontmatter.title}</h3>
                 </a>
                 <div class="mb-2 flex items-center text-sm">
-                  <a class="text-green-600 hover:underline hover:text-green-700" href={`/article/${post.frontmatter.url}`}>{post.frontmatter.author[0].label}</a>
+                  <a class="text-green-600 hover:underline hover:text-green-700" href={post.frontmatter.url}>{post.frontmatter.author[0].label}</a>
                   <span class="text-gray-400 mx-2">•</span>
                   <span class="text-gray-400">{new Date(post.frontmatter.publishDate).toLocaleDateString('en-US', dateOptions)}</span>
                 </div>
