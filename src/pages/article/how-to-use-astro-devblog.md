@@ -9,7 +9,7 @@ author:
     label: Christopher Kapic
 summary: Use Astro devblog to host your own developer blog for free and
   automatically republish to Medium and Dev.to.
-image: /cms/veeterzy-smqil_2v4vs-unsplash.jpg
+image: /cms/astro-devblog.png
 tags:
   - astro
 publishDate: 2022-08-15T18:25:52.846Z
