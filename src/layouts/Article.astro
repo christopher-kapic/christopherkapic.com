@@ -12,7 +12,7 @@ const author = authors.authors.filter(author => {return (author.id === content.a
       <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center">
           <!-- <a class="uppercase text-base lg:text-xl text-green-500 hover:text-green-400 hover:underline" href="#">Travel</a> -->
-          <span class="text-base lg:text-xl text-white">{new Date(content.publishDate).toLocaleDateString('en-US', dateOptions)}</span>
+          <span class="text-base lg:text-xl text-white drop-shadow">{new Date(content.publishDate).toLocaleDateString('en-US', dateOptions)}</span>
           <div class="mt-2">
             <h2 class="mb-6 text-4xl lg:text-5xl text-white font-bold drop-shadow">{content.title}</h2>
             <div class="flex justify-center">
