@@ -3,6 +3,7 @@ const { readdirSync } = require("fs");
 const matter = require("gray-matter");
 const prisma = new PrismaClient();
 const authors_json = require("./src/pages/_cms/authors.json");
+const fetch = require('node-fetch')
 
 type AuthorCMSType = {
   id: string;
