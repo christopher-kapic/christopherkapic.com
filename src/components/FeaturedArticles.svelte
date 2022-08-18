@@ -2,6 +2,16 @@
   import type { PostType } from '../types/post.type';
   export let selected = 'All';
   export let posts: PostType[] = [];
+  const ordered_posts = posts.sort((a, b) => {
+    const a_date: Date = new Date(a.frontmatter.publishDate)
+    const b_date: Date = new Date(b.frontmatter.publishDate)
+    if (a_date < b_date) {
+      return 1;
+    }
+    return -1;
+  });
+    // console.log(a_date < b_date)
+    // return Number(a_date < b_date)});
   let categories: string[] = ['All'];
   posts.forEach(post => {
     for (let tag of post.frontmatter.tags) {
