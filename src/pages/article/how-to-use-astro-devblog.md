@@ -15,7 +15,7 @@ tags:
 publishDate: 2022-08-15T18:25:52.846Z
 updateDate: 2022-08-15T18:25:52.857Z
 ---
-Originally published on \[Astro Devblog](https://astro-devblog.netlify.app/article/how-to-use-astro-devblog).
+Originally published on [Astro Devblog](https://astro-devblog.netlify.app/article/how-to-use-astro-devblog).
 
 For those of you who just want instructions, scroll down to the *instructions* section.
 
