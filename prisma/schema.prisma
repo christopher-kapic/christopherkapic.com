@@ -24,7 +24,7 @@ model Article {
   id                String   @id
   publishedToMedium Boolean  @default(false)
   publishedToDev    Boolean  @default(false)
-  devId             String?
+  devId             Int?
   updatedAt         DateTime @updatedAt
   author            Author   @relation(fields: [authorId], references: [id])
   authorId          String

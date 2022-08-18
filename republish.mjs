@@ -5,13 +5,14 @@ const prisma = new PrismaClient();
 import authors_json from './src/pages/_cms/authors.json' assert {type: "json"};
 import fetch from 'node-fetch'
 
-const url = process.env.URL;
+const url = process.env.URL || 'https://christopherkapic.com';
 
 async function republish() {
   console.log("\nRepublishing articles to Medium and Dev...\n");
   const files = readdirSync("./src/pages/article");
   for (let _file of files) {
     const file = matter.read(`./src/pages/article/${_file}`);
+    console.log(url+(file.data.image))
     const authors_json_filtered = authors_json.authors.filter((_a) => {
       return _a.id === file.data.author.value;
     });
@@ -60,12 +61,12 @@ async function republish() {
         body: JSON.stringify({
           title: file.data.title,
           contentFormat: "html",
-          content: file.data.content,
+          content: file.content,
           canonicalUrl: url + (file.path).substring(11).replace('.md', ''),
           tags: file.data.tags,
           publishStatus: "public",
         }),
-      });
+      }).then(r => r.json()).then(r => console.log(r))
 
       const med_article = await prisma.article.upsert({
         where: {
@@ -95,9 +96,9 @@ async function republish() {
           article: {
             title: file.data.title,
             published: "true",
-            body_markdown: file.data.content,
+            body_markdown: file.content,
             tags: file.data.tags,
-            main_image: file.data.image,
+            main_image: url + file.data.image,
             canonical_url: url + (file.path).substring(11).replace('.md', ''),
             description: file.data.summary,
           }
@@ -105,6 +106,8 @@ async function republish() {
       })
 
       const new_dev_article_json = await new_dev_article.json();
+
+      console.log(new_dev_article_json)
 
       const dev_article = await prisma.article.upsert({
         where: {
@@ -145,9 +148,9 @@ async function republish() {
           article: {
             title: file.data.title,
             published: "true",
-            body_markdown: file.data.content,
+            body_markdown: file.content,
             tags: file.data.tags,
-            main_image: file.data.image,
+            main_image: url + file.data.image,
             canonical_url: url + (file.path).substring(11).replace('.md', ''),
             description: file.data.summary,
           }
