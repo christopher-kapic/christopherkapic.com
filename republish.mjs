@@ -1,19 +1,9 @@
-const { PrismaClient } = require("@prisma/client");
-const { readdirSync } = require("fs");
-const matter = require("gray-matter");
+import { PrismaClient } from '@prisma/client';
+import {readdirSync} from 'fs'
+import matter from 'gray-matter';
 const prisma = new PrismaClient();
-const authors_json = require("./src/pages/_cms/authors.json");
-const fetch = require('node-fetch')
-
-type AuthorCMSType = {
-  id: string;
-  title: string;
-  description: string;
-  profilePhoto: string;
-  portraitPhoto: string;
-  twitter: string;
-  website: string;
-};
+import authors_json from './src/pages/_cms/authors.json' assert {type: "json"};
+import fetch from 'node-fetch'
 
 const url = process.env.URL;
 
@@ -22,7 +12,7 @@ async function republish() {
   const files = readdirSync("./src/pages/article");
   for (let _file of files) {
     const file = matter.read(`./src/pages/article/${_file}`);
-    const authors_json_filtered = authors_json.authors.filter((_a: AuthorCMSType) => {
+    const authors_json_filtered = authors_json.authors.filter((_a) => {
       return _a.id === file.data.author.value;
     });
     const author = await prisma.author.upsert({
@@ -96,6 +86,7 @@ async function republish() {
       // publish to dev
       console.log(`\nPublishing ${file.data.title} to dev.to`);
       const new_dev_article = await fetch("https://dev.to/api/articles", {
+        method: "POST",
         headers: {
           "api-key": author.devtoKey,
           "Content-Type": "application/json"
@@ -145,6 +136,7 @@ async function republish() {
       })
 
       await fetch(`https://dev.to/api/articles/${_old_article.devId}`, {
+        method: "PUT",
         headers: {
           "api-key": author.devtoKey,
           "Content-Type": "application/json"
