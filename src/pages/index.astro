@@ -5,6 +5,9 @@ import { settings } from '../settings'
 ---
 
 <BaseLayout {}>
+	<head>
+		<script src="https://sendfox.com/js/form.js"></script>
+	</head>
 	<section>
 		<div class="relative py-20 radius-for-skewed"
 			style={`background-image: url('${settings.home_image}'); background-size: cover; background-repeat: no-repeat; background-position: center;`}>
@@ -34,7 +37,6 @@ import { settings } from '../settings'
 	<div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="a_password" tabindex="-1" value="" autocomplete="off" /></div>
 	<p><button type="submit">Submit</button></p>
 	</form>
-	<script src="https://sendfox.com/js/form.js"></script>
 	
 </BaseLayout>
 
