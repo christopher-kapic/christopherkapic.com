@@ -10,7 +10,7 @@ author:
 summary: Today, there are many options for CMSs, from traditional ones like
   Wordpress to many modern Headless CMSs. Use this framework to help get started
   in making your decision.
-image: /cms/choose-a-cms.png
+image: /cms/vs.png
 tags:
   - netlify
   - netlifycms
