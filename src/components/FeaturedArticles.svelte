@@ -53,9 +53,9 @@
           {#each posts as post}
             {#if post.frontmatter.tags.includes(selected) || selected == 'All'}
             <div class="flex flex-wrap -mx-3 mb-8 lg:mb-6">
-              <div class="mb-4 lg:mb-0 w-full lg:w-1/4 px-3">
-                <img class="w-full h-full object-cover rounded" src={post.frontmatter.image} alt="">
-              </div>
+              <a class="mb-4 lg:mb-0 w-full lg:w-1/4 px-3" href={post.frontmatter.url}>
+                <img class="w-full object-cover rounded aspect-video" src={post.frontmatter.image} alt="">
+              </a>
               <div class="w-full lg:w-3/4 px-3">
                 <a class="hover:underline" href={`${post.frontmatter.url}`}>
                   <h3 class="mb-1 text-2xl font-bold font-heading">{post.frontmatter.title}</h3>
