@@ -8,32 +8,18 @@ import { settings } from "../settings";
   <section>
     <div
       class="relative py-20 radius-for-skewed"
-      style={`background-image: url('${settings.home_image}'); background-size: cover; background-repeat: no-repeat; background-position: center;`}
+      style="background-image: linear-gradient(to bottom, #121826, #141d32, #16223f, #19274b, #1d2c58);"
     >
-      <div class="absolute inset-0 bg-gray-900 opacity-80 radius-for-skewed">
-      </div>
       <div class="container mx-auto px-4 relative">
         <div class="max-w-md text-center mx-auto">
           <span class="text-green-600 font-bold"
             >Using ✨<a
-              href="https://astro.build/"
-              class="underline text-gray-100">Astro</a
-            >✨ for <em>great</em> performance</span
+              href="https://github.com/christopher-kapic/astro-devblog"
+              class="underline text-blue-400">astro-devblog</a
+            >✨ for <em>great</em> performance and automatic republishing.</span
           >
-          <h2 class="text-4xl lg:text-5xl text-white font-bold font-heading">
-            Developer Blog that pushes to <a
-              href="https://medium.com"
-              class="font-display max-w-sm text-green-600 font-bold leading-tight"
-              ><span class="link link-underline link-underline-black"
-                >Medium</span
-              >
-            </a> and <a
-              class="font-display max-w-sm text-green-600 font-bold leading-tight"
-              href="https://dev.to/"
-              ><span class="link link-underline link-underline-black"
-                >dev.to</span
-              >
-            </a>
+          <h2 class="text-4xl lg:text-5xl text-white font-bold font-heading mt-2">
+            Christopher Kapic
           </h2>
           <div class="mb-6 max-w-sm mx-auto">
             <p class="text-gray-400 leading-loose">
@@ -41,14 +27,6 @@ import { settings } from "../settings";
               old blog posts and update the branding from the template.
             </p>
           </div>
-          <a
-            class="inline-block"
-            href="https://app.netlify.com/start/deploy?repository=https://github.com/christopher-kapic/astro-devblog"
-            ><img
-              src="https://www.netlify.com/img/deploy/button.svg"
-              alt="Deploy to Netlify"
-            />
-          </a>
         </div>
       </div>
     </div>
