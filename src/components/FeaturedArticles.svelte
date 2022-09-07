@@ -2,7 +2,7 @@
   import type { PostType } from '../types/post.type';
   export let selected = 'All';
   export let posts: PostType[] = [];
-  posts = posts.filter(isDraft);
+  posts = posts.filter(isNotDraft);
   posts.sort((a, b) => {
     const a_date: Date = new Date(a.frontmatter.publishDate)
     const b_date: Date = new Date(b.frontmatter.publishDate)
@@ -11,8 +11,8 @@
     }
     return -1;
   });
-  function isDraft(post: any) {
-    return post.frontmatter.draft
+  function isNotDraft(post: any) {
+    return !post.frontmatter.draft
   }
 
   let categories: string[] = ['All'];
