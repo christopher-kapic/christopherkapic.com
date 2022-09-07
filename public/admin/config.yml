@@ -30,6 +30,7 @@ collections:
         prefix: article
         timestamp: true
         # hint: This widget generates a unique read-only id
+      - {label: "Draft", name: "draft", widget: "boolean", default: true}
       - { label: "Publish to Medium", name: "medium", widget: "boolean", default: true }
       - { label: "Publish to Dev.to", name: "devto", widget: "boolean", default: true }
       - { label: "Title", name: "title", widget: "string" }

@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Article.astro
 id: article-1660587952751-xbTzNBe5n
+draft: false
 medium: false
 devto: false
 title: How to use Astro Devblog

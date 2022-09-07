@@ -1,6 +1,7 @@
 ---
 layout: ../../layouts/Article.astro
 id: article-1660849730767-RZhD6-RbH
+draft: false
 medium: true
 devto: true
 title: I created a 🔥blazingly🔥 fast blog template with Astro and NetlifyCMS
