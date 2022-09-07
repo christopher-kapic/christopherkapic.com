@@ -17,7 +17,8 @@ export const settings = {
     },
 
   ],
-  facebook: null,
-  instagram: null,
-  twitter: 'https://twitter.com/kapicode'
+  facebook: "hi",
+  instagram: "hi",
+  twitter: 'https://twitter.com/kapicode',
+  github: 'https://github.com/christopher-kapic'
 }
