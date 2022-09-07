@@ -11,11 +11,10 @@ const author = authors.authors.filter(author => {return (author.id === content.a
     <div class="py-20 mb-12" style={`background: url(${content.image}); background-repeat: no-repeat; background-size: cover;`}>
       <div class="container mx-auto px-4">
         <div class="max-w-2xl mx-auto text-center">
-          <!-- <a class="uppercase text-base lg:text-xl text-green-500 hover:text-green-400 hover:underline" href="#">Travel</a> -->
-          <span class="text-base lg:text-xl text-white drop-shadow">{new Date(content.publishDate).toLocaleDateString('en-US', dateOptions)}</span>
+          <span class="text-base lg:text-xl text-white drop-shadow bg-gray-700/60 rounded backdrop-blur p-1">{new Date(content.publishDate).toLocaleDateString('en-US', dateOptions)}</span>
           <div class="mt-2">
-            <h2 class="mb-6 text-4xl lg:text-5xl text-white font-bold drop-shadow">{content.title}</h2>
-            <div class="flex justify-center">
+            <h2 class="mb-6 text-4xl lg:text-5xl text-white font-bold drop-shadow bg-gray-800/70 rounded backdrop-blur p-2">{content.title}</h2>
+            <div class="flex justify-center bg-gray-800/70 rounded backdrop-blur p-4">
               <div class="mr-4">
                 <img class="w-12 h-12 object-cover object-top rounded-full" src={author.profilePhoto} alt={`${author.title}'s Profile Photo'`}>
               </div>
