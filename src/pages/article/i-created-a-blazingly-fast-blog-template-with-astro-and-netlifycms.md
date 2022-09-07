@@ -19,7 +19,6 @@ tags:
 publishDate: 2022-08-18T19:08:50.863Z
 updateDate: 2022-08-18T19:08:50.870Z
 ---
-This article was written and published on my [blog](https://christopherkapic.com). I _did not_ interact with Medium or dev.to except to check that it was republished correctly.
 
 ## What is [Astro Devblog](https://astro-devblog.netlify.app/)?
 ### A serverless (JAMstack) blog template intended to be deployed to Netlify which republishes articles to [Medium](https://medium.com/@christopherkapic) and [dev.to](https://dev.to/christopherkapic).
