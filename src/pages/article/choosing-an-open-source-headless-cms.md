@@ -2,8 +2,8 @@
 layout: ../../layouts/Article.astro
 id: article-1661785570397-giUUGBbC_
 draft: false
-medium: false
-devto: false
+medium: true
+devto: true
 title: Choosing an Open Source Headless CMS
 author:
   - value: author-1660337033199-jpFG6u1fX
